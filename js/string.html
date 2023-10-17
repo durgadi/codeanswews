@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse Words</title>
+  <style>
+    input {
+      background-color: lightblue;
+    }
+
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<input type="text" id="inputSentence" placeholder="Enter a sentence">
+<button onclick="reverseWords()">Reverse Words</button>
+<p id="outputSentence"></p>
+
+<script>
+function reverseWords() {
+  const inputSentence = document.getElementById("inputSentence").value;
+  const reversedWords = inputSentence
+    .split(" ")
+    .map(word => reverseWord(word))
+    .join(" ");
+  document.getElementById("outputSentence").textContent = reversedWords;
+}
+
+function reverseWord(word) {
+  return word.split("").reverse().join("");
+}
+</script>
+
+</body>
+</html>

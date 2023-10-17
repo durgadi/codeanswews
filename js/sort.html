@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sort Array in Descending Order</title>
+  <style>
+   
+    body {
+      font-family: Arial, sans-serif;
+    }
+    input, button {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<input type="text" id="inputArray" placeholder="put , after number">
+<button onclick="sortArray()">Sort Array</button>
+<p id="outputArray"></p>
+
+<script>
+function sortArray() {
+  const inputArray = document.getElementById("inputArray").value.split(",").map(Number); 
+  const sortedArray = inputArray.sort((a, b) => b - a); 
+  document.getElementById("outputArray").textContent = "array= " + sortedArray.join(", ");
+}
+</script>
+
+</body>
+</html>
